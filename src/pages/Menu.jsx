@@ -6,7 +6,9 @@ function Menu() {
   const [categories, setCategories] = useState([])
   const [items, setItems] = useState([])
   const [error, setError] = useState(null)
-  const { addItem } = useCart()
+  const cart = useCart()
+  console.log("cart context:", cart)
+  const { addItem } = cart
 
   useEffect(() => {
     Promise.all([getCategories(), getFoodItems()])
@@ -44,11 +46,14 @@ function Menu() {
                     </p>
                   </div>
                   <button
-                    onClick={() => addItem(item)}
-                    className="bg-orange-600 text-white px-3 py-1.5 rounded hover:bg-orange-700"
-                  >
-                    Add
-                  </button>
+                        onClick={() => {
+                            console.log("Add clicked", item)
+                            addItem(item)
+                        }}
+                        className="bg-orange-600 text-white px-3 py-1.5 rounded hover:bg-orange-700"
+                        >
+                        Add
+                    </button>
                 </div>
               ))}
             </div>
