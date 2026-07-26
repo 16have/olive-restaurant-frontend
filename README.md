@@ -1,16 +1,200 @@
-# React + Vite
+# 🍽️ Olive Restaurant Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application for browsing restaurant menus, placing orders, and tracking deliveries.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Project Overview
 
-## React Compiler
+The Olive Restaurant Frontend provides customers with a simple and responsive interface for ordering food online.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Built using React and Tailwind CSS, the application communicates with a Django REST Framework backend.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+### Customers can
+
+* Browse restaurant menu
+* View food categories
+* Add items to cart
+* Update cart quantities
+* Checkout
+* Select payment method
+* Track order status
+* Responsive user interface
+
+---
+
+## Tech Stack
+
+* React
+* Vite
+* React Router
+* Tailwind CSS
+* Axios
+* Context API
+* Docker
+
+---
+
+## Project Structure
+
+```text
+src/
+│
+├── assets/
+├── components/
+├── context/
+├── hooks/
+├── layouts/
+├── pages/
+│     ├── Home
+│     ├── Menu
+│     ├── Cart
+│     ├── Checkout
+│     └── OrderTracking
+│
+├── services/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## Pages
+
+* Home
+* Menu
+* Cart
+* Checkout
+* Order Tracking
+
+---
+
+## Installation
+
+Clone repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/olive-restaurant-frontend.git
+```
+
+Navigate into project
+
+```bash
+cd olive-restaurant-frontend
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start development server
+
+```bash
+npm run dev
+```
+
+Application runs at
+
+```
+http://localhost:5173
+```
+
+---
+
+## Build Production Version
+
+```bash
+npm run build
+```
+
+Preview production build
+
+```bash
+npm run preview
+```
+
+---
+
+## Docker
+
+Build image
+
+```bash
+docker build -t olive-frontend .
+```
+
+Run container
+
+```bash
+docker run -p 5173:5173 olive-frontend
+```
+
+---
+
+## Backend Connection
+
+Default API
+
+```
+http://localhost:8000/api/
+```
+
+The frontend communicates with the Django REST API for:
+
+* Categories
+* Menu Items
+* Orders
+* Order Tracking
+
+---
+
+## State Management
+
+The project uses React Context API to manage:
+
+* Shopping Cart
+* Cart Items
+* Total Price
+* Checkout Data
+
+---
+
+## GitHub Actions
+
+Continuous Integration automatically:
+
+* Installs dependencies
+* Builds the React application
+* Validates production build
+
+---
+
+## Future Improvements
+
+* User Authentication
+* User Profiles
+* Favorite Foods
+* Search
+* Filtering
+* Payment Gateway Integration
+* Push Notifications
+* Dark Mode
+* Online Delivery Tracking
+
+---
+
+## Author
+
+Kelvin Tullo
+
+---
+
+## License
+
+Developed for educational and portfolio purposes.
