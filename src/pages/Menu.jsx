@@ -6,9 +6,7 @@ function Menu() {
   const [categories, setCategories] = useState([])
   const [items, setItems] = useState([])
   const [error, setError] = useState(null)
-  const cart = useCart()
-  console.log("cart context:", cart)
-  const { addItem } = cart
+  const { addItem } = useCart()
 
   useEffect(() => {
     Promise.all([getCategories(), getFoodItems()])
@@ -45,12 +43,12 @@ function Menu() {
                       KSh {item.price}
                     </p>
                   </div>
-                    <button
-                        onClick={() => addItem(item)}
-                        className="bg-orange-600 text-white px-3 py-1.5 rounded hover:bg-orange-700"
-                        >
-                        Add
-                    </button>
+                  <button
+                    onClick={() => addItem(item)}
+                    className="bg-orange-600 text-white px-3 py-1.5 rounded hover:bg-orange-700"
+                  >
+                    Add
+                  </button>
                 </div>
               ))}
             </div>
