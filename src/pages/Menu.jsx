@@ -45,11 +45,8 @@ function Menu() {
                       KSh {item.price}
                     </p>
                   </div>
-                  <button
-                        onClick={() => {
-                            console.log("Add clicked", item)
-                            addItem(item)
-                        }}
+                    <button
+                        onClick={() => addItem(item)}
                         className="bg-orange-600 text-white px-3 py-1.5 rounded hover:bg-orange-700"
                         >
                         Add
